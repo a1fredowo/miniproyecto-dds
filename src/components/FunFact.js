@@ -56,7 +56,7 @@ const countryData = {
     if (!data) return null;
   
     return (
-      <div className="bg-white rounded-lg shadow-md p-6 mb-4">
+      <div className="bg-white rounded-lg shadow-xl p-6 mb-4">
         <div className="flex items-center justify-between mb-4">
           <h3 className="text-2xl font-bold">
             {data.flag} {data.country}

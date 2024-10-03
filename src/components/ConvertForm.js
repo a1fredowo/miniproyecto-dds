@@ -2,16 +2,16 @@
 import { useState } from 'react';
 
 const currencies = [
-  { code: 'USD', name: 'USD - Dólar estadounidense' },
-  { code: 'EUR', name: 'EUR - Euro' },
-  { code: 'CLP', name: 'CLP - Peso chileno' },
-  { code: 'GBP', name: 'GBP - Libra esterlina' },
-  { code: 'JPY', name: 'JPY - Yen japonés' },
-  { code: 'ARS', name: 'ARS - Peso argentino' },
-  { code: 'BRL', name: 'BRL - Real brasileño' },
-  { code: 'CAD', name: 'CAD - Dólar canadiense' },
-  { code: 'CNY', name: 'CNY - Yuan chino' },
-  { code: 'MXN', name: 'MXN - Peso mexicano' },
+  { code: 'USD', name: 'USD' },
+  { code: 'EUR', name: 'EUR' },
+  { code: 'CLP', name: 'CLP' },
+  { code: 'GBP', name: 'GBP' },
+  { code: 'JPY', name: 'JPY' },
+  { code: 'ARS', name: 'ARS' },
+  { code: 'BRL', name: 'BRL' },
+  { code: 'CAD', name: 'CAD' },
+  { code: 'CNY', name: 'CNY' },
+  { code: 'MXN', name: 'MXN' },
 ];
 
 export default function ConvertForm({ onConvert }) {
@@ -75,7 +75,7 @@ export default function ConvertForm({ onConvert }) {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-md space-y-6">
+      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-xl space-y-6">
         <div>
           <label htmlFor="amount" className="block text-sm font-medium text-gray-700 mb-1">
             Cantidad

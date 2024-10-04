@@ -3,6 +3,16 @@
 import { useState } from 'react';
 import ConvertForm from '@/components/ConvertForm';
 import FunFact from '@/components/FunFact';
+import Footer from '@/components/Footer'; 
+
+const Header = () => (
+  <header className="bg-blue-500 text-white p-6 w-full">
+    <div className="max-w-7xl mx-auto">
+      <h1 className="text-4xl font-bold text-center">Conversor de Monedas</h1>
+      <p className="text-center mt-2">Convierte tus monedas al instante.</p>
+    </div>
+  </header>
+);
 
 export default function Home() {
   const [result, setResult] = useState(null);
@@ -12,9 +22,9 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-4xl font-bold text-center mb-8">Conversor de monedas</h1>
-      
+    <div>
+      <Header />
+
       <ConvertForm onConvert={handleConvert} />
       
       {result && (
@@ -37,6 +47,8 @@ export default function Home() {
           <FunFact currency={result.toCurrency} />
         </>
       )}
+
+      <Footer />
     </div>
   );
 }

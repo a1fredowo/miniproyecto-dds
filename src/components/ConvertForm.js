@@ -5,13 +5,8 @@ const currencies = [
   { code: 'USD', name: 'USD' },
   { code: 'EUR', name: 'EUR' },
   { code: 'CLP', name: 'CLP' },
-  { code: 'GBP', name: 'GBP' },
   { code: 'JPY', name: 'JPY' },
   { code: 'ARS', name: 'ARS' },
-  { code: 'BRL', name: 'BRL' },
-  { code: 'CAD', name: 'CAD' },
-  { code: 'CNY', name: 'CNY' },
-  { code: 'MXN', name: 'MXN' },
 ];
 
 export default function ConvertForm({ onConvert }) {
@@ -67,7 +62,7 @@ export default function ConvertForm({ onConvert }) {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <div className="max-w-md mx-auto mt-6">
       {error && (
         <div className="mb-4 p-4 bg-red-50 border border-red-200 rounded-lg flex items-start">
           <span className="text-red-500 mr-2">⚠️</span>
@@ -75,7 +70,7 @@ export default function ConvertForm({ onConvert }) {
         </div>
       )}
 
-      <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg shadow-xl space-y-6">
+      <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-xl space-y-6">
         <div>
           <label htmlFor="amount" className="block text-sm font-medium text-gray-700 mb-1">
             Cantidad

@@ -6,7 +6,7 @@ import FunFact from '@/components/FunFact';
 import Footer from '@/components/Footer'; 
 
 const Header = () => (
-  <header className="bg-blue-500 text-white p-6 w-full">
+  <header className="bg-blue-600 text-white p-6 w-full">
     <div className="max-w-7xl mx-auto">
       <h1 className="text-4xl font-bold text-center">Conversor de Monedas</h1>
       <p className="text-center mt-2">Convierte tus monedas al instante.</p>

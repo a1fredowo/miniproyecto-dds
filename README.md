@@ -1,5 +1,6 @@
 # Conversor de monedas
 Mini proyecto para el ramo de Desarrollo de Software  
+El proyecto es una página web de conversión de monedas que, además de realizar la conversión entre diferentes divisas, muestra datos culturales como artistas destacados o fun facts del país de origen de la moneda seleccionada.  
 Para ver la página web después de clonar el repositorio hay que ejecutar el comando `npm install` el cual instalará las dependencias y después `npm run dev` para ver la página web en un entorno local.
 
 ## Integrantes

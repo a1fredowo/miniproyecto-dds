@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
 
-const API_KEY = '5ea20d05e6f7a5292e0536c9'; // Es mejor moverlo a variables de entorno
+const API_KEY = '5ea20d05e6f7a5292e0536c9';
 const BASE_URL = 'https://v6.exchangerate-api.com/v6';
 
 // Función auxiliar para validar los datos de entrada

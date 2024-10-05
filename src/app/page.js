@@ -1,4 +1,4 @@
-"use client"; // Marca este archivo como un componente cliente
+"use client";
 
 import { useState } from 'react';
 import ConvertForm from '@/components/ConvertForm';
@@ -22,31 +22,32 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="flex flex-col min-h-screen"> 
       <Header />
 
-      <ConvertForm onConvert={handleConvert} />
-      
-      {result && (
-        <>
-          <div className="mt-8 max-w-md mx-auto bg-white p-6 rounded-lg shadow-xl my-8"> 
-            <h2 className="text-2xl font-semibold mb-4">Resultado:</h2>
-            <p className="text-lg">
-              {result.amount} {result.fromCurrency} = {' '}
-              <span className="font-bold">{result.result}</span> {result.toCurrency}
-            </p>
-            {result.rate && (
-              <p className="text-sm text-gray-600 mt-2">
-                Tasa de cambio: 1 {result.fromCurrency} = {result.rate} {result.toCurrency}
+      <main className="flex-grow"> 
+        <ConvertForm onConvert={handleConvert} />
+        
+        {result && (
+          <>
+            <div className="mt-8 max-w-md mx-auto bg-white p-6 rounded-lg shadow-xl my-8"> 
+              <h2 className="text-2xl font-semibold mb-4">Resultado:</h2>
+              <p className="text-lg">
+                {result.amount} {result.fromCurrency} = {' '}
+                <span className="font-bold">{result.result}</span> {result.toCurrency}
               </p>
-            )}
-          </div>
+              {result.rate && (
+                <p className="text-sm text-gray-600 mt-2">
+                  Tasa de cambio: 1 {result.fromCurrency} = {result.rate} {result.toCurrency}
+                </p>
+              )}
+            </div>
 
-          {/* Mostrar FunFacts para las monedas de origen y destino */}
-          <FunFact currency={result.fromCurrency} />
-          <FunFact currency={result.toCurrency} />
-        </>
-      )}
+            <FunFact currency={result.fromCurrency} />
+            <FunFact currency={result.toCurrency} />
+          </>
+        )}
+      </main>
 
       <Footer />
     </div>
